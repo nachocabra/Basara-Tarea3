@@ -48,3 +48,27 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+# Galerías – App (Expo / React Native)
+
+**Stack:** Expo (toolchain para RN), React Native (app móvil), TypeScript (superset de JS).  
+La app consume una **API** (*Application Programming Interface*) hecha en Express (backend).
+
+---
+
+## Requisitos
+- Node.js 18+ y npm
+- Expo CLI (se usa vía `npx expo start`)
+- Backend corriendo (Express + Prisma + SQLite)
+
+---
+
+## Configurar la **URL base** del backend (en un único lugar)
+Editar **`App.tsx`** y definir la constante **`BASE_URL`** al inicio del archivo:
+
+```ts
+// App.tsx
+const BASE_URL = 'http://IP_DE_TU_PC:3001'; // ej.: 'http://192.168.1.12:3001'
+// Android Emulator (AVD): 'http://10.0.2.2:3001'
+// iOS Simulator (Mac):    'http://localhost:3001'
